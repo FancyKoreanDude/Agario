@@ -5,6 +5,7 @@
  */
 package agario;
 
+import audio.AudioPlayer;
 import environment.Environment;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
@@ -44,6 +45,9 @@ class Computer extends Environment {
 
     @Override
     public void keyReleasedHandler(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+            AudioPlayer.play("/Death_no_no_noooo.wav");
+        }
     }
 
     @Override
