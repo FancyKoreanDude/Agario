@@ -17,6 +17,8 @@ public class Cell {
     public Cell(int x, int y, int radius, House house){
         this.x = x;
         this.y = y;
+        this.yVelocity = yVelocity;
+        this.xVelocity = 10;
         this.radius = radius;
         this.house = house;
     }
@@ -29,8 +31,22 @@ public class Cell {
 //<editor-fold defaultstate="collapsed" desc="Properties">
     private int x;
     private int y;
+    private int xVelocity, yVelocity;
     private int radius;
     private House house;
+    
+    
+    public void stop(){
+        xVelocity = 0;
+        yVelocity = 0;
+    }
+    
+   public void move(){
+       x += xVelocity;
+       y += yVelocity;
+       
+   }
+    
     
     /**
      * @return the x
