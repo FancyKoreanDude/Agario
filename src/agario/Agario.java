@@ -6,11 +6,7 @@
 package agario;
 
 import environment.ApplicationStarter;
-
-/**
- *
- * @author PrivettBoy
- */
+import java.awt.Dimension;
 public class Agario {
 
     /**
@@ -18,7 +14,7 @@ public class Agario {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ApplicationStarter.run("Agar.io", new Computer());
+        ApplicationStarter.run(null, "Agar.io", new Dimension(2560, 1440), new Computer());
     }
     
 }
